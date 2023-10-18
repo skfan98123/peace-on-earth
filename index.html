@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess What 100</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Guess What 100!</h1>
+        <p>Let's see who's the chosen one!</p>
+        <div class="input-section">
+            <label for="player1">Player 1 please enter your name: </label>
+            <input type="text" id="player1">
+            <br>
+            <label for="player2">Player 2 please enter your name: </label>
+            <input type="text" id="player2">
+            <br>
+            <button class="start-button" onclick="startGame()">Let's begin!</button>
+        </div>
+        <div id="gameArea" class="game-area" style="display:none;">
+            <div id="player1Area" class="player-area">
+                <input type="number" id="p1Guess" class="guess-input" placeholder="Player 1 guess">
+            </div>
+            <div id="player2Area" class="player-area">
+                <input type="number" id="p2Guess" class="guess-input" placeholder="Player 2 guess">
+            </div>
+            <button class="guess-button" onclick="makeGuess()">Guess</button>
+        </div>
+        <p id="result" class="result-text"></p>
+        <p id="correctAnswer" class="correct-answer"></p>
+        <div id="winningText" class="winning-text"></div>
+        <button class="restart-button" id="restart-button" onclick="restartGame()" style="display:none;">Restart Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
